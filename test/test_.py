@@ -1,8 +1,16 @@
-from dotenv import load_dotenv
-from readerllamaindex.pineconer import Pineconer
+import sys
+import os
+# 将项目根目录添加到 Python 路径
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+import re
 import pytest
 
+from dotenv import load_dotenv
 load_dotenv()
+
+
+
+from readerllamaindex.pineconer import Pineconer
 
 
 def test_pinecone():
